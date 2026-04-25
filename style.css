@@ -560,3 +560,23 @@ img {
     padding: 5px 3px;
   }
 }
+
+/* Contenedor para tablas con scroll en móvil */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border-radius: 15px;
+}
+
+.table-scroll table {
+  min-width: 600px;
+  margin: 0;
+}
+
+/* En tablet y desktop, que se vea normal */
+@media (min-width: 768px) {
+  .table-scroll table {
+    min-width: auto;
+  }
+}
