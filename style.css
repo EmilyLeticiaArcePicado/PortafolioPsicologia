@@ -580,3 +580,92 @@ img {
     min-width: auto;
   }
 }
+
+/* ============================================ */
+/* Hacer que la tabla sea responsiva en móvil */
+/* ============================================ */
+
+/* Versión para computadora y tablet (se ve como tu imagen) */
+@media (min-width: 769px) {
+  .tabla-estilos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #f9f9ff;
+    border-radius: 15px;
+    overflow: hidden;
+    display: table;
+  }
+
+  .tabla-estilos th,
+  .tabla-estilos td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .tabla-estilos th {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+  }
+
+  .tabla-movil {
+    display: none;
+  }
+}
+
+/* Versión para móvil (se ve como tarjetas) */
+@media (max-width: 768px) {
+  .tabla-estilos {
+    display: none;
+  }
+
+  .tabla-movil {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .card-estilo {
+    background: #f9f9ff;
+    border-radius: 15px;
+    padding: 15px;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-estilo h4 {
+    color: #667eea;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
+  }
+
+  .fila-estilo {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 5px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .fila-estilo:last-child {
+    border-bottom: none;
+  }
+
+  .etiqueta {
+    font-weight: bold;
+    color: #667eea;
+    width: 45%;
+    font-size: 0.85rem;
+  }
+
+  .valor {
+    width: 55%;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #333;
+  }
+}
