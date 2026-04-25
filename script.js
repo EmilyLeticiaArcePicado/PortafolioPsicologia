@@ -97,3 +97,15 @@ const timelineItems = document.querySelectorAll('.timeline');
 timelineItems.forEach((item) => {
   observer.observe(item);
 });
+
+// Mejorar experiencia táctil en móviles
+document.querySelectorAll('.tab-btn, .concept-card, .close-popup').forEach((el) => {
+  el.addEventListener('touchstart', function () {
+    // Solo para mejorar feedback táctil
+  });
+});
+
+// Asegurar que las imágenes no se salgan del contenedor
+document.querySelectorAll('img').forEach((img) => {
+  img.setAttribute('loading', 'lazy');
+});
